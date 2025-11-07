@@ -82,12 +82,12 @@ function h($s){ return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
         <h3><?= h($p['title']) ?></h3>
         <p><?= nl2br(h($p['content'])) ?></p>
         <small class="muted"><?= h($p['created_at']) ?></small>
-        <?php if ($user): ?>
-          <div class="actions">
-            <a href="post_edit.php?id=<?= (int)$p['id'] ?>">Edit</a>
-            <a href="post_delete.php?id=<?= (int)$p['id'] ?>">Delete</a>
-          </div>
-        <?php endif; ?>
+        <?php if ($user && is_admin()): ?>
+  <div class="actions">
+    <a href="post_edit.php?id=<?= (int)$p['id'] ?>">Edit</a>
+    <a href="post_delete.php?id=<?= (int)$p['id'] ?>">Delete</a>
+  </div>
+<?php endif; ?>
       </article>
     <?php endforeach; ?>
 
