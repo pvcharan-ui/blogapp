@@ -1,0 +1,7 @@
+body { font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 32px auto; padding: 0 16px; }
+header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+nav a, .actions a, button { margin-right:10px; text-decoration:none; }
+.card { border:1px solid #ddd; border-radius:8px; padding:12px 16px; margin:12px 0; }
+label { display:block; margin:8px 0; }
+input, textarea { width:100%; padding:8px; }
+.error { color:#c00; } .success { color:#060; }
