@@ -1,7 +1,26 @@
+/* Layout polish */
 body { font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 32px auto; padding: 0 16px; }
 header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-nav a, .actions a, button { margin-right:10px; text-decoration:none; }
-.card { border:1px solid #ddd; border-radius:8px; padding:12px 16px; margin:12px 0; }
-label { display:block; margin:8px 0; }
-input, textarea { width:100%; padding:8px; }
-.error { color:#c00; } .success { color:#060; }
+h1 { font-size: 40px; margin: 0 0 12px; }
+nav .btn { margin-left: 10px; }
+.card { border:1px solid #e6e6e6; border-radius:12px; padding:16px 18px; margin:16px 0; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.03); }
+.muted { color:#666; }
+.actions a { margin-right: 10px; }
+
+/* Buttons / links */
+.btn, .btn-link {
+  display:inline-block; padding:8px 12px; border:1px solid #ddd; border-radius:8px; text-decoration:none;
+}
+.btn:hover { background:#f7f7f7; }
+
+/* Search bar */
+.searchbar { display:flex; gap:8px; align-items:center; margin:16px 0 8px; }
+.searchbar input { flex:1; padding:10px 12px; border:1px solid #ddd; border-radius:8px; }
+.searchbar button.btn { padding:10px 14px; }
+
+/* Pagination */
+.pagination { display:flex; flex-wrap: wrap; gap:6px; margin:18px 0; }
+.pagination a, .pagination span {
+  padding:6px 10px; border:1px solid #ddd; border-radius:8px; text-decoration:none;
+}
+.pagination .current { font-weight:700; background:#f2f2f2; border-color:#bbb; }
